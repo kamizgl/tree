@@ -1,11 +1,11 @@
 package com.example.tree.preOrder;
 
-import com.example.tree.tree.Node;
+import com.example.tree.tree.TreeNode;
 
 public class TestOrder {
 
     public static void main(String[] args) {
-        Node node = new Node("A",new Node("B",null,null),new Node("C",null,null));
+        TreeNode treeNode = new TreeNode("A",new TreeNode("B",null,null),new TreeNode("C",null,null));
 //        PreOrder preOrder = new PreOrder();
 //        preOrder.preOrder(node);
 
@@ -13,6 +13,6 @@ public class TestOrder {
 //        inOrder.inOrder(node);
 
         PostOrder postOrder =new PostOrder();
-        postOrder.postOrder(node);
+        postOrder.postOrder(treeNode);
     }
 }

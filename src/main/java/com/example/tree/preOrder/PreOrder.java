@@ -1,21 +1,21 @@
 package com.example.tree.preOrder;
 
-import com.example.tree.tree.Node;
+import com.example.tree.tree.TreeNode;
 
 public class PreOrder {
 
     /**
      * 前序遍历， 根节点在前面，然后左节点，然后右节点
-     * @param node
+     * @param treeNode
      */
-    public void preOrder(Node node){
+    public void preOrder(TreeNode treeNode){
 
-        if(node==null){
+        if(treeNode ==null){
             return;
         }
-        System.out.print(node.getData() + " -> ");
-        preOrder(node.getLeftNode());
-        preOrder(node.getRightNode());
+        System.out.print(treeNode.getData() + " -> ");
+        preOrder(treeNode.getLeftNode());
+        preOrder(treeNode.getRightNode());
     }
 
 }

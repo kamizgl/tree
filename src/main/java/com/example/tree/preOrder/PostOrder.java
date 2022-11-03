@@ -1,6 +1,6 @@
 package com.example.tree.preOrder;
 
-import com.example.tree.tree.Node;
+import com.example.tree.tree.TreeNode;
 
 public class PostOrder {
 
@@ -8,7 +8,7 @@ public class PostOrder {
      * 后序遍历  左 右，中
      * @param root
      */
-    public void postOrder(Node root){
+    public void postOrder(TreeNode root){
         if(root==null){
             return;
         }

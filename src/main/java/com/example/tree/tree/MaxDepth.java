@@ -51,6 +51,5 @@ public class MaxDepth {
         TreeNode root = InitTree.Init();
         int i = maxDepth(root);
         System.out.println(i);
-
     }
 }

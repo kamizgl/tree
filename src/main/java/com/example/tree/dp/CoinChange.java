@@ -1,5 +1,6 @@
 package com.example.tree.dp;
 
+import java.rmi.MarshalException;
 import java.util.Arrays;
 
 /**
@@ -42,6 +43,22 @@ public class CoinChange {
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 
+    public int coinChange2(int[] coins, int amount) {
+        int[] memo = new int[amount+1];
+        //定义备忘录
+
+        Arrays.fill(memo, amount + 1);
+        for (int i = 0; i < memo.length; i++) {
+            for (int coin : coins) {
+                if (i - coin < 0) {
+
+                    continue;
+                }
+                memo[i] = Math.min(memo[i], memo[amount - coin]+1);
+            }
+        }
+        return memo[amount] == amount + 1 ? -1 : memo[amount];
+    }
 
 
 

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class CheckInclusion {
+public class FindAnagrams {
     /**
-     * 给你两个字符串 s1 和 s2 ，写一个函数来判断 s2 是否包含 s1 的排列。如果是，返回 true ；否则，返回 false 。
+     * 给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。
      * @param s
      * @param p
      * @return
@@ -56,5 +56,10 @@ public class CheckInclusion {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        FindAnagrams findAnagrams = new FindAnagrams();
+        findAnagrams.findAnagrams("cbaebabacd","abc");
     }
 }

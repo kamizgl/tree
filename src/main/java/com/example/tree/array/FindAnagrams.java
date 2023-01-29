@@ -1,5 +1,6 @@
 package com.example.tree.array;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +61,7 @@ public class FindAnagrams {
 
     public static void main(String[] args) {
         FindAnagrams findAnagrams = new FindAnagrams();
-        findAnagrams.findAnagrams("cbaebabacd","abc");
+        List<Integer> anagrams = findAnagrams.findAnagrams("baa", "aa");
+        System.out.println(anagrams);
     }
 }

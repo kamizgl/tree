@@ -2,6 +2,7 @@ package com.example.tree.array;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -43,6 +44,7 @@ public class LengthOfLongestSubstring {
         return maxLen;
     }
 
+    //输入 s = "abcabcbb" 输出3
     public int lengthOfLongestSubstring2(String s) {
         //维护当前最长不重复字符子串
         Set<Character> set = new HashSet<>();
@@ -65,10 +67,28 @@ public class LengthOfLongestSubstring {
         return max;
     }
 
+    public int lengthOfLongestSubstring3(String s) {
+        Map<Character, Integer> need = new HashMap<>();
+        int max = 0;
+        int r = 0, l = 0;
+        while (r < s.length()) {
+            Integer integer = need.get(s.charAt(r));
+            if (integer == null) {
+                need.put(s.charAt(r), 1);
+                r++;
+            }
+            else{
+                need.remove(s.charAt(l));
+                l++;
+            }
+            max = Math.max(max, need.size());
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
         LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
-        int length = lengthOfLongestSubstring.lengthOfLongestSubstring("pwwkew");
+        int length = lengthOfLongestSubstring.lengthOfLongestSubstring3("abcabc");
         System.out.println(length);
-
     }
 }

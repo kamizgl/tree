@@ -1,6 +1,9 @@
 package com.example.tree.array;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenerateMatrix {
 
     int[][] generateMatrix(int n) {
@@ -48,10 +51,24 @@ public class GenerateMatrix {
         }
         return matrix;
     }
+    public void reverseString(char[] s) {
+        int l =0,r=s.length-1;
+        while(l<r){
+            char tmp = s[r];
+            s[r] = s[l];
+            s[l] =tmp;
+            l++;
+            r++;
+        }
+    }
+
+    List<Integer> spiralOrder(int[][] matrix) {
+        return null;
+    }
 
     public static void main(String[] args) {
-        GenerateMatrix generateMatr =new GenerateMatrix();
+        GenerateMatrix generateMatr = new GenerateMatrix();
         int[][] matrix = generateMatr.generateMatrix(3);
-        System.out.println(matrix);
+        char tmp ='1';
     }
 }
